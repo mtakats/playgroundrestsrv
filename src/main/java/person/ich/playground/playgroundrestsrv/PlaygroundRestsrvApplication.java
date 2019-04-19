@@ -76,7 +76,7 @@ public class PlaygroundRestsrvApplication implements CommandLineRunner {
         log.info("----------------------------------------------------------------------");
         log.info("++++++++++ caching ");
         byte[] md5_1 = demoUtil.md5("blablabliblibloblo");
-        log.info("++++++++++ caching - second is missing here due to caching ");
+        log.info("++++++++++ caching - second call is missing here due to caching ");
         byte[] md5_2 = demoUtil.md5("blablabliblibloblo");
         log.info("++++++++++ caching - both objects are identical: " + (md5_1 == md5_2) ); // true
         log.info( demoUtil.getClass().toString() ); // extended class name to indicate cash usage
