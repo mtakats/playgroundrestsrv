@@ -9,7 +9,7 @@ Demo REST service with Spring Boot
 * mvnw verify
 * mvnw spring-boot:run
 
-## Reference Documentation and Guides
+## Reference documentation and guides
 
 * [Official Apache Maven documentation](https://maven.apache.org/guides/index.html)
 * [Building a RESTful Web Service](https://spring.io/guides/gs/rest-service/)
