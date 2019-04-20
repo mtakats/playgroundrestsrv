@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/v1")
 public class DemoController {
 
-    private final static String s1 = "Greetings from PlaygroundRestsrv!";
+    private final static String s1 = "Greetings from PlaygroundRestsrv endpoint!";
     private final static String s2 = "Hello %s! ";
 
     @GetMapping(value = {"/ping"}, produces = MediaType.TEXT_PLAIN_VALUE)

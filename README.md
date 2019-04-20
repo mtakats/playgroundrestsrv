@@ -9,9 +9,13 @@ Demo REST service with Spring Boot
 * mvnw verify
 * mvnw spring-boot:run
 
-## API documentation
+## Endpoints
 
 * http://localhost:8080/swagger-ui.html
+
+## Static pages
+
+* http://localhost:8080/index.html
 
 ## Reference documentation and guides
 
