@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        html * {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 20px;
+            color: darkgreen;
+        }
+        button {
+            width: 30%;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+    <script type="text/javascript">
+        function send() {
+            fetch('/v1/hello/JavaScript')
+                .then(response => response.text())
+                .then(result => {
+                    document.getElementById("demo").innerHTML = "<h1>".concat(result, "</h1>")
+                })
+        }
+    </script>
+    <title>PlaygroundRestsrv</title>
+</head>
+
+<body>
+<p id="demo">
+    <button type="submit" onclick="send()">Call hello</button>
+</p>
+</body>
+</html>

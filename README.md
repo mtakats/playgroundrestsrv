@@ -16,6 +16,7 @@ Demo REST service with Spring Boot
 ## Static pages
 
 * http://localhost:8080/index.html
+* http://localhost:8080/jsDemo.html
 
 ## Reference documentation and guides
 
