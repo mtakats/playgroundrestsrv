@@ -31,7 +31,8 @@ public class PlaygroundRestsrvApplication implements CommandLineRunner {
     private String injectEnvValue;
 
 
-    //@Autowired // constructor injection, not needed, done by SPRING automatically
+    //@Autowired
+    // constructor injection not needed, done by SPRING automatically
     public PlaygroundRestsrvApplication(
             Environment env,
             ApplicationContext ctx,
