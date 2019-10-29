@@ -20,7 +20,8 @@ public class DocumentationConfig {
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
                 .apis(RequestHandlerSelectors.any())
-                .paths(endpoints()).build();
+                .paths(endpoints())
+                .build();
     }
     private Predicate<String> endpoints() {
         return Predicates.or(PathSelectors.regex("/v1/.*"));
