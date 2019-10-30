@@ -36,7 +36,7 @@ public class DemoController {
     @GetMapping(value = {"/hello/{name}"}, produces = MediaType.TEXT_PLAIN_VALUE)
     @ApiOperation(value = "Say hello with name in path", notes = "Some notes to hello with name in path")
     public String helloPathVariable(
-            @ApiParam(name = "name", value = "name", defaultValue = "Path Ballo")
+            @ApiParam(name = "name", value = "name")
             @PathVariable String name) {
         log.info("/hello/{name} called with: " + name);
         return String.format(s2, name) + s1;
