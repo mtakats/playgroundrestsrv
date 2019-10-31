@@ -19,6 +19,7 @@ public class PlaygroundRestsrvApplicationIT {
     @LocalServerPort
     private int port;
 
+    private final String baseUrl = "http://localhost:";
     private final Logger log = LoggerFactory.getLogger(getClass());
 
     @Ignore
@@ -31,7 +32,7 @@ public class PlaygroundRestsrvApplicationIT {
     public void pingTest() {
         log.info("++++++++++ Ping test");
         when()
-                .get("http://localhost:" + port + "/v1/ping")
+                .get(baseUrl + port + "/v1/ping")
                 .then()
                 .statusCode(200)
                 .body(comparesEqualTo("pong"));
@@ -41,7 +42,7 @@ public class PlaygroundRestsrvApplicationIT {
     public void helloQueryDefaultTest() {
         log.info("++++++++++ Hello query default test");
         when()
-                .get("http://localhost:" + port + "/v1/hello")
+                .get(baseUrl + port + "/v1/hello")
                 .then()
                 .statusCode(200)
                 .body(comparesEqualTo("Hello  Query Ballo! Greetings from PlaygroundRestsrv endpoint!"));
@@ -51,7 +52,7 @@ public class PlaygroundRestsrvApplicationIT {
     public void helloQueryTest() {
         log.info("++++++++++ Hello query test");
         when()
-                .get("http://localhost:" + port + "/v1/hello?name=tester")
+                .get(baseUrl + port + "/v1/hello?name=tester")
                 .then()
                 .statusCode(200)
                 .body(comparesEqualTo("Hello tester! Greetings from PlaygroundRestsrv endpoint!"));
@@ -61,9 +62,20 @@ public class PlaygroundRestsrvApplicationIT {
     public void helloPathTest() {
         log.info("++++++++++ Hello path test");
         when()
-                .get("http://localhost:" + port + "/v1/hello/tester")
+                .get(baseUrl + port + "/v1/hello/tester")
                 .then()
                 .statusCode(200)
                 .body(comparesEqualTo("Hello tester! Greetings from PlaygroundRestsrv endpoint!"));
     }
+
+    @Test
+    public void wrongUrlTest() {
+        log.info("++++++++++ Wrong URL test");
+        when()
+                .get(baseUrl + port + "/v1/hellox")
+                .then()
+                .statusCode(404)
+                .body(containsString("Not Found"));
+    }
+
 }
