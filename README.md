@@ -11,7 +11,7 @@ Demo REST service with Spring Boot
 
 ## Endpoints
 
-* http://localhost:8080/swagger-ui.html
+* http://localhost:8080/swagger-ui/index.html
 
 ## Static pages
 

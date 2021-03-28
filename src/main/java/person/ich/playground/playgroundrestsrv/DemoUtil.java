@@ -57,12 +57,11 @@ public class DemoUtil {
         return new AsyncResult<>("The future is now!");
     }
 
-    private String[] urlString = {"123.abc", "httpx://456789", "http://www.google.de"};
+    private final String[] urlString = {"123.abc", "httpx://456789", "http://www.google.de"};
     private int i = 0;
 
     @Retryable
     String loadContentFromUrl() throws IOException {
-        String content = "";
         URL url = new URL(urlString[i++]);
         StreamUtils.copyToString((url.openStream()), StandardCharsets.UTF_8);
         return url.toString();

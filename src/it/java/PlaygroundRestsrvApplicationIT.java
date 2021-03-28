@@ -22,6 +22,7 @@ public class PlaygroundRestsrvApplicationIT {
     private final String baseUrl = "http://localhost:";
     private final Logger log = LoggerFactory.getLogger(getClass());
 
+    @SuppressWarnings("EmptyMethod")
     @Ignore
     @Test
     public void toBeIgnoredIT() {

@@ -26,9 +26,9 @@ public class PlaygroundRestsrvApplication implements CommandLineRunner {
 
     //@Autowired // field injection
     private DemoUtil demoUtil;
-    private ApplicationContext ctx;
-    private Environment env;
-    private String injectEnvValue;
+    private final ApplicationContext ctx;
+    private final Environment env;
+    private final String injectEnvValue;
 
 
     //@Autowired

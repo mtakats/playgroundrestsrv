@@ -23,8 +23,8 @@ public class DemoUtilParameterizedTest {
 
     private static final TestContextManager testContextManager = new TestContextManager(DemoUtilParameterizedTest.class);
     private final Logger log = LoggerFactory.getLogger(getClass());
-    private int min;
-    private int max;
+    private final int min;
+    private final int max;
 
     @Autowired
     private DemoUtil demoUtil;

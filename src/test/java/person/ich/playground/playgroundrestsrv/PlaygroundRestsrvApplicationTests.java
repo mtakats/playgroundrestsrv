@@ -10,6 +10,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import static junit.framework.TestCase.assertTrue;
 
+@SuppressWarnings("EmptyMethod")
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class PlaygroundRestsrvApplicationTests {

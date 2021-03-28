@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/v1")
-@Api(tags = "Demo controller", value = "DemoQueries", description = "Supported requests")
+@Api(tags = "Demo controller", value = "DemoQueries")
 public class DemoController {
 
     private final Logger log = LoggerFactory.getLogger(getClass());
@@ -18,6 +18,7 @@ public class DemoController {
     private final static String s1 = "Greetings from PlaygroundRestsrv endpoint!";
     private final static String s2 = "Hello %s! ";
 
+    @SuppressWarnings("SameReturnValue")
     @GetMapping(value = {"/ping"}, produces = MediaType.TEXT_PLAIN_VALUE)
     @ApiOperation(value = "Ping me", notes = "Some notes to ping")
     public String ping() {
